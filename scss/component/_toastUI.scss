@@ -1,0 +1,50 @@
+.toastUI {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+
+    &__show{
+        position: relative;
+    }
+
+    &__item {
+        position: relative;
+        background: #ffd;
+        padding: 15px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 300px;
+    }
+
+    &__icon {
+        width: 30px;
+    }
+
+    &__success {
+        margin-bottom: 30px;
+        color: #000;
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: 129.412%;
+        letter-spacing: -0.408px;
+    }
+
+    &__desc {
+        color: #cc0;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 138.462%; /*  */
+        letter-spacing: -0.078px;
+    }
+
+    &__exit {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 15px;
+    }
+}

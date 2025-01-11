@@ -1,0 +1,46 @@
+@use "../abstracts";
+.errorPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    @include abstracts.screen(md) {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__media {
+        width: 600px;
+        @include abstracts.screen(lg) {
+            width: 400px;
+        }
+
+        @include abstracts.screen(md) {
+            width: 300px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__title {
+        color: #676a6c;
+        font-size: 6rem;
+        font-weight: 500;
+        line-height: 111.29%;
+        @include abstracts.screen(lg) {
+            font-size: 5rem;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 4rem;
+        }
+    }
+
+    &__error {
+        color: #2d3134;
+    }
+}

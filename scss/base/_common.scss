@@ -1,0 +1,90 @@
+@use "../abstracts";
+.heading {
+    &__primary {
+        color: #2d3134;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 125%;
+    }
+
+    &__secondary {
+        color: #2d3134;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 112.903%;
+    }
+
+    &__third {
+        color: #2d3134;
+        font-family: Inter;
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 133.333%;
+    }
+
+    &__hero {
+        &--primary {
+            color: #2d3134;
+            font-size: 6.2rem;
+            font-weight: 700;
+            line-height: 112.903%;
+        }
+
+        &--secondary {
+        }
+    }
+}
+
+.desc {
+    &__primary {
+        color: #676a6c;
+        font-family: Inter;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 162.5%;
+    }
+}
+
+.btn {
+    &__primary {
+        padding: 16px 26px;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 114.286%;
+        letter-spacing: -0.001em;
+        border-radius: 8px;
+        background: #31c3e0;
+        border: 1px solid #31c3e0;
+        transition: 0.5s ease;
+
+        &:hover {
+            color: #30bbd7;
+            border: 1px solid #31c3e0;
+            background: #fff;
+        }
+    }
+
+    &__secondary {
+        padding: 24px 32px;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1;
+        border-radius: 12px;
+        background: #ff7b29;
+        transition: 0.5s ease;
+        border: 2px solid #ff7b29;
+
+        &:hover {
+            color: #ff7b29;
+            background: #fff;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 18px 20px;
+            font-size: 1.6rem;
+            line-height: 137.5%;
+        }
+    }
+}

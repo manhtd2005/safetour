@@ -1,0 +1,32 @@
+@use "../abstracts";
+.navbar {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__item--line {
+        position: absolute;
+        left: 15px;
+        bottom: 8px;
+        content: "";
+        display: inline-block;
+        border-radius: 2px;
+        background: #ff7b29;
+        width: 12px;
+        height: 3px;
+    }
+
+    &__item &__item--link {
+        position: relative;
+        padding: 10px 15px;
+        color: #676a6c;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 114.286%;
+        transition: 0.5s ease;
+        &:hover {
+            color: #2d3134;
+        }
+    }
+}

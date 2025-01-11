@@ -1,0 +1,25 @@
+@use "../abstracts";
+.sectionTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include abstracts.screen(sm) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    &__content{
+        max-width: 507px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @include abstracts.screen(md) {
+            max-width: 350px;
+        }
+
+        @include abstracts.screen(sm) {
+            max-width: 100%;
+        }
+    }
+}

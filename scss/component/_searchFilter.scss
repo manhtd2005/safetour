@@ -1,0 +1,98 @@
+@use "../abstracts";
+.searchFilter {
+    padding-bottom: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+        padding: 34px 40px;
+        box-shadow: 0px 40px 100px rgba(110, 110, 110, 0.08);
+        display: flex;
+        align-items: center;
+        gap: 75px;
+        @include abstracts.screen(lg) {
+            gap: 32px;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__heading {
+        color: #0a192d;
+        font-family: Inter;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__down {
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    &__choice {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__list {
+        display: none;
+        padding: 10px 0;
+        position: absolute;
+        border-radius: 10px;
+        top: 30px;
+        left: -10px;
+        background: #fff;
+        width: 150px;
+        box-shadow: 0px 40px 100px rgba(110, 110, 110, 0.08);
+    }
+
+    &__item {
+        padding: 15px;
+        &:hover {
+            background: #ccc;
+        }
+    }
+
+    &__btn {
+        padding: 24px 40px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        border-radius: 8px;
+        background: #132742;
+        box-shadow: 0px 25px 25px -20px rgba(0, 0, 0, 0.2);
+        border: 2px solid #132742;
+        color: #fff;
+        font-family: Inter;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 88.889%;
+        letter-spacing: 0.1em;
+        transition: 0.5s ease;
+
+        &:hover {
+            background: #ccd;
+            color: #132742;
+        }
+
+        @include abstracts.screen(lg) {
+            font-size: 1.8rem;
+            line-height: 88.889%;
+            letter-spacing: 0.2em;
+        }
+    }
+}

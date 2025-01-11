@@ -1,0 +1,99 @@
+@use "../abstracts";
+.comingSoon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 100px;
+
+    @include abstracts.screen(lg) {
+        gap: 40px;
+    }
+
+    @include abstracts.screen(md) {
+        flex-direction: column-reverse;
+    }
+
+    &__media {
+        width: 300px;
+
+        @include abstracts.screen(md) {
+            height: 40%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__time {
+        margin: 40px 0 70px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        @include abstracts.screen(md) {
+            gap: 24px;
+        }
+
+        &--item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__number {
+        color: #ff7b29;
+        font-size: 6.2rem;
+        font-weight: 500;
+        line-height: 111.29%;
+        @include abstracts.screen(md) {
+            font-size: 4rem;
+            line-height: 125%;
+        }
+        &--title {
+            color: #676a6c;
+            font-family: Inter;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 175%;
+        }
+    }
+
+    &__desc {
+        max-width: 420px;
+        margin-bottom: 30px;
+        color: #2d3134;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 133.333%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.2rem;
+            line-height: 150%;
+            max-width: 350px;
+        }
+    }
+    &__formInput {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__input {
+        width: 327px;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #ececec;
+        background: #fff;
+        @include abstracts.screen(lg) {
+            width: 270px;
+        }
+
+        @include abstracts.screen(md) {
+            width: 200px;
+        }
+    }
+}

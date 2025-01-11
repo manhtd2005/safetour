@@ -1,0 +1,73 @@
+@use "../abstracts";
+.formSub {
+    position: relative;
+    padding: 70px 0;
+    margin-top: 140px;
+    border-radius: 20px;
+    background: #e8c400;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__heading {
+        color: #fff;
+        @include abstracts.screen(lg) {
+            font-size: 3.5rem;
+        }
+        @include abstracts.screen(md) {
+            font-size: 3.2rem;
+        }
+        @include abstracts.screen(sm) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 41px;
+        max-width: 425px;
+        color: rgba(255, 255, 255, 0.88);
+        text-align: center;
+        @include abstracts.screen(lg) {
+            max-width: 350px;
+            font-size: 1.4rem;
+        }
+        @include abstracts.screen(sm) {
+            max-width: 250px;
+            font-size: 1.1rem;
+        }
+    }
+
+    &__form {
+        position: relative;
+    }
+
+    &__input {
+        padding: 23px 60px 23px 26px;
+        width: 450px;
+        border-radius: 12px;
+        background: #fff;
+        color: #000;
+        font-family: Inter;
+        font-size: 1.4rem;
+        line-height: 1;
+        @include abstracts.screen(md) {
+            width: 350px;
+            font-size: 1.2rem;
+
+        }
+        @include abstracts.screen(sm) {
+            width: 250px;
+            font-size: 1.1rem;
+        }
+    }
+
+    &__send {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

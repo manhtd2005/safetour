@@ -1,0 +1,165 @@
+@use "../abstracts";
+.slideshow {
+    padding-bottom: 140px;
+    overflow: hidden;
+
+    &__arrowList {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__arrowItem {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        transition: 0.5s ease;
+        &:hover {
+            background: #ff7b29;
+        }
+        &--icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    // Bottom
+    &__bottom {
+        margin-top: 40px;
+    }
+
+    &__list {
+        margin: 0 15px;
+        width: 100vw;
+        display: flex;
+        gap: 30px;
+        transition: 0.5s ease;
+    }
+
+    &__item {
+        padding: 15px;
+        border-radius: 16px;
+        border: 2px solid #e6e6e6;
+    }
+
+    &__img {
+        width: 382px;
+        height: 250px;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 16px;
+        @include abstracts.screen(xxl) {
+            width: 308px;
+            height: 170px;
+        }
+
+        @include abstracts.screen(xl) {
+            width: 256px;
+            height: 138px;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 296px;
+            height: 159px;
+        }
+
+        @include abstracts.screen(md) {
+            width: 476px;
+            height: 255px;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 85vw;
+            height: 200px;
+        }
+    }
+
+    &__content {
+        padding: 18px 9px 24px;
+    }
+
+    &__location {
+        display: inline-block;
+        margin-bottom: 8px;
+        color: #2d3134;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.5;
+        @include abstracts.screen(lg) {
+            font-size: 1.6rem;
+            line-height: 162.5%;
+        }
+    }
+
+    &__desc {
+        position: relative;
+        margin-bottom: 27px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 60px;
+            width: 1px;
+            height: 13px;
+            background: #e1e1e1;
+        }
+    }
+
+    &__places,
+    &__activities {
+        color: #8a8a8a;
+        font-family: Inter;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price {
+        color: #2d3134;
+        font-family: Inter;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 133.333%;
+    }
+
+    &__btnBook {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    &__safe {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        &--logo {
+            padding: 10px;
+            display: inline-block;
+            color: #fff;
+            font-family: Inter;
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: #ff7b29;
+            border-radius: 50%;
+        }
+
+        &--desc {
+            color: #737979;
+            font-family: Inter;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 162.5%;
+        }
+    }
+}

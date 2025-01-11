@@ -1,0 +1,111 @@
+@use "../abstracts";
+.footer {
+    padding: 140px 0 50px;
+
+    &__top {
+        margin-bottom: 40px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, 1fr);
+        @include abstracts.screen(md) {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 30px;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
+
+    &__title {
+        color: #020000;
+        font-family: Inter;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        &--link {
+            padding: 10px 0;
+            display: inline-block;
+            color: #676a6c;
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+
+    &__desc {
+        max-width: 200px;
+        color: #676a6c;
+        font-family: Inter;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 185.714%;
+    }
+
+    &__email {
+        color: #31c3e0;
+        font-family: Inter;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    &__down {
+        margin-top: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: start;
+            gap: 33px;
+        }
+    }
+
+    &__navbar{
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: start !important;
+            gap: 10px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include abstracts.screen(lg) {
+            gap: 10px;
+        }
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
+    }
+
+    &__navbar--link {
+        @include abstracts.screen(lg) {
+            padding: 10px 8px !important;
+        }
+        @include abstracts.screen(sm) {
+            padding: 15px 0 !important;
+        }
+    }
+
+    &__app {
+        width: 46px;
+
+        &--icon {
+            width: 100%;
+        }
+    }
+}

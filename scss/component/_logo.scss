@@ -1,0 +1,31 @@
+@use "../abstracts";
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &__icon {
+        padding: 8px;
+        color: #fff;
+        font-family: Inter;
+        font-size: 1.6rem;
+        font-weight: 700;
+        background: #ff7b29;
+        border-radius: 50%;
+    }
+
+    &__brand {
+        color: #212832;
+        font-family: Inter;
+        font-size: 2.4rem;
+        font-weight: 700;
+
+        &--dot{
+            color: #FF7B29;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 2rem;
+        }
+    }
+}
