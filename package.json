@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass scss:assets/css -w",
-    "start": "json-server --watch db.json"
+    "start": "json-server --host 0.0.0.0 --watch db.json"
   },
   "author": "",
   "license": "ISC",
